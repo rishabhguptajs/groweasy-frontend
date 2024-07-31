@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# GrowEasy Frontend Assignment
 
-## Getting Started
+This is a frontend project developed using Next.js, React, and TailwindCSS for displaying and editing advertisement banners. The project allows users to edit banner details and upload custom images.
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Installation](#installation)
+- [Usage](#usage)
+- [Components](#components)
+  - [AdBanner](#adbanner)
+  - [EditBannerBs](#editbannerbs)
+- [Dependencies](#dependencies)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone the repository:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+    ```bash
+    git clone https://github.com/your-username/groweasy-frontend-assignment.git
+    cd groweasy-frontend-assignment
+    ```
 
-## Learn More
+2. Install the dependencies:
 
-To learn more about Next.js, take a look at the following resources:
+    ```bash
+    npm install
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Start the development server:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+    ```bash
+    npm run dev
+    ```
 
-## Deploy on Vercel
+## Usage
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Navigate to `http://localhost:3000` in your browser.
+2. The homepage will display a grid of advertisement banners.
+3. Click on the edit icon (pencil) on any banner to open the edit modal.
+4. In the edit modal, you can:
+    - Change the banner image by selecting one from the provided options or uploading a custom image.
+    - Edit the banner title, description, CTA (Call to Action), and background template.
+    - Click "Done" to save the changes or "Cancel" to discard them.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Components
+
+### AdBanner
+
+This component is responsible for displaying individual advertisement banners. It accepts the following props:
+
+- `title`: The title of the banner.
+- `description`: The description of the banner.
+- `cta`: The call to action text.
+- `image`: The image URL for the banner.
+- `backgroundTemplate`: The background template for the banner.
+- `onEdit`: Function to call when the edit button is clicked.
+- `onCtaClick`: Function to call when the CTA button is clicked.
+
+### EditBannerBs
+
+This component renders a modal for editing banner details. It accepts the following props:
+
+- `banner`: The banner object to be edited.
+- `onClose`: Function to call when the modal is closed.
+- `onSave`: Function to call when the banner is saved.
+
+## Dependencies
+
+- `next`: The React framework for production.
+- `react`: The React library for building user interfaces.
+- `tailwindcss`: A utility-first CSS framework for rapidly building custom designs.
+
+# Thank you!
